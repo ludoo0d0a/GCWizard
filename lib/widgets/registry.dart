@@ -914,9 +914,9 @@ class Registry {
         searchStrings: SEARCHSTRING_BCD + 'gray'
       ),
       GCWTool(
-        tool: BCDLibawCraig(),
-        i18nPrefix: 'bcd_libawcraig',
-        searchStrings: SEARCHSTRING_BCD + 'libaw-craig libawcraig'
+        tool: BCDGrayExcess(),
+        i18nPrefix: 'bcd_grayexcess',
+        searchStrings: SEARCHSTRING_BCD + 'grayexcess gray-excess'
       ),
       GCWTool(
         tool: BCDOBrien(),
@@ -939,14 +939,9 @@ class Registry {
         searchStrings: SEARCHSTRING_BCD + 'tompkins'
       ),
       GCWTool(
-        tool: BCDHamming(),
-        i18nPrefix: 'bcd_hamming',
-        searchStrings: SEARCHSTRING_BCD + 'hamming'
-      ),
-      GCWTool(
-        tool: BCDBiquinary(),
-        i18nPrefix: 'bcd_biquinary',
-        searchStrings: SEARCHSTRING_BCD + 'biquinaer biquinary'
+        tool: BCD2of5(),
+        i18nPrefix: 'bcd_2of5',
+        searchStrings: SEARCHSTRING_BCD + '2of5 2aus5 twooffive zweiausfuenf'
       ),
       GCWTool(
         tool: BCD2of5Planet(),
@@ -959,19 +954,24 @@ class Registry {
         searchStrings: SEARCHSTRING_BCD + 'postnet 2of5 2aus5 twooffive zweiausfuenf united states postal service usps barcode'
       ),
       GCWTool(
-        tool: BCD2of5(),
-        i18nPrefix: 'bcd_2of5',
-        searchStrings: SEARCHSTRING_BCD + '2of5 2aus5 twooffive zweiausfuenf'
+        tool: BCDLibawCraig(),
+        i18nPrefix: 'bcd_libawcraig',
+        searchStrings: SEARCHSTRING_BCD + 'libaw-craig libawcraig'
+      ),
+      GCWTool(
+        tool: BCDBiquinary(),
+        i18nPrefix: 'bcd_biquinary',
+        searchStrings: SEARCHSTRING_BCD + 'biquinaer biquinary'
+      ),
+      GCWTool(
+        tool: BCDHamming(),
+        i18nPrefix: 'bcd_hamming',
+        searchStrings: SEARCHSTRING_BCD + 'hamming'
       ),
       GCWTool(
         tool: BCD1of10(),
         i18nPrefix: 'bcd_1of10',
         searchStrings: SEARCHSTRING_BCD + '1of10 1aus10 oneoften einsauszehn '
-      ),
-      GCWTool(
-        tool: BCDGrayExcess(),
-        i18nPrefix: 'bcd_grayexcess',
-        searchStrings: SEARCHSTRING_BCD + 'grayexcess gray-excess'
       ),
 
       // Beaufort Selection *******************************************************************************************
