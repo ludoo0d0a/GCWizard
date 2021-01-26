@@ -12,6 +12,7 @@ import 'package:gc_wizard/widgets/selector_lists/astronomy_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/base_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/bcd_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/beaufort_selection.dart';
+import 'package:gc_wizard/widgets/selector_lists/braille_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/ccitt1_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/ccitt2_selection.dart';
 import 'package:gc_wizard/widgets/selector_lists/cistercian_numbers_selection.dart';
@@ -116,6 +117,7 @@ import 'package:gc_wizard/widgets/tools/crypto_and_encodings/bcd/bcdpetherick.da
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/bcd/bcdstibitz.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/bcd/bcdtompkins.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/bifid.dart';
+import 'package:gc_wizard/widgets/tools/crypto_and_encodings/braille.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/book_cipher.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/burrows_wheeler.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/caesar.dart';
@@ -427,6 +429,12 @@ class Registry {
         i18nPrefix: 'book_cipher',
         category: ToolCategory.CRYPTOGRAPHY,
         searchStrings: 'bookcipher buchcode word wort position zeile row line absatz section letter buchstabe buechercode buchchiffre buecherchiffre'
+      ),
+      GCWTool(
+        tool: BrailleSelection(),
+        i18nPrefix: 'braille_selection',
+        category: ToolCategory.CRYPTOGRAPHY,
+        searchStrings: 'tactiles blindenschrift braille dots points punkte'
       ),
       GCWTool(
         tool: BurrowsWheeler(),
@@ -1012,6 +1020,13 @@ class Registry {
         tool: Beaufort(),
         i18nPrefix: 'beaufort',
         searchStrings: SEARCHSTRING_BEAUFORT
+      ),
+
+      // BBraille Selection *******************************************************************************************
+      GCWTool(
+          tool: Braille(),
+          i18nPrefix: 'braille',
+          searchStrings: 'tactiles blindenschrift braille dots points punkte'
       ),
 
       //CCITT*Selection **********************************************************************************************

@@ -289,6 +289,13 @@
   "beaufort_mode_left" : "To Beaufort",
   "beaufort_mode_right" : "From Beaufort",
 
+  "braille_selection_title" : "Braille",
+  "braille_selection_description" : "Encoding/decoding of Braille",
+  "braille_title" : "Braille",
+  "braille_description" : "Graphical encoding/decoding of Braille",
+  "braille_example" : "S  → ⠎",
+  "braille_output" : "Single Characters",
+
   "brainfk_title" : "Brainf**k",
   "brainfk_description" : "Esoteric programming language with 8 characters",
   "brainfk_example" : ">++++++++[<++++++++>-]<++.",

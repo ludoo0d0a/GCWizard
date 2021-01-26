@@ -42,3 +42,7 @@ flutter config --enable-web
 iOS build: GeneratedPluginRegistrant.m Module not found.
 
 -> Open XCode with .xcworkspace file instead of .xcodeproj
+
+/*** Troubleshooting on Dart Analysis ***/
+error: The named parameter 'colors' isn't defined. (undefined_named_parameter at [gc_wizard] lib\widgets\tools\science_and_technology\colors\base\hsv_picker.dart:84)
+-> restart analysis server
