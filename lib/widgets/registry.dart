@@ -180,6 +180,7 @@ import 'package:gc_wizard/widgets/tools/crypto_and_encodings/substitution.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/tap_code.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/tapir.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/tomtom.dart';
+import 'package:gc_wizard/widgets/tools/crypto_and_encodings/trifid.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/trithemius.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/vigenere.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/z22.dart';
@@ -817,6 +818,12 @@ class Registry {
         i18nPrefix: 'tapir',
         category: ToolCategory.CRYPTOGRAPHY,
         searchStrings: 'tapir ddr nva mfs stasi nationale volksarmee'
+      ),
+      GCWTool(
+        tool: Trifid(),
+        i18nPrefix: 'trifid',
+        category: ToolCategory.CRYPTOGRAPHY,
+        searchStrings: 'trifid felix delastelle'
       ),
       GCWTool(
         tool: TomTomSelection(),
