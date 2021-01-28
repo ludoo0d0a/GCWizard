@@ -142,6 +142,7 @@ class BrailleState extends State<Braille> {
       children: <Widget>[
         Container(
           width: 180,
+          height: 180,
           padding: EdgeInsets.only(
               top: DEFAULT_MARGIN * 2,
               bottom: DEFAULT_MARGIN * 4
@@ -194,9 +195,9 @@ class BrailleState extends State<Braille> {
     var displays = segments
         .where((character) => character != null)
         .map((character) {
-      var displayedSegments = Map<String, bool>.fromIterable(character, key: (e) => e, value: (e) => true);
-      return BrailleSegmentDisplay(segments: displayedSegments, readOnly: true);
-    })
+            var displayedSegments = Map<String, bool>.fromIterable(character, key: (e) => e, value: (e) => true);
+            return BrailleSegmentDisplay(segments: displayedSegments, readOnly: true);
+          })
         .toList();
     return buildSegmentDisplayOutput(countColumns, displays);
   }

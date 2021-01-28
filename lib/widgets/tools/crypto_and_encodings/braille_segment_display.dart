@@ -27,10 +27,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['a'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 18.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 20
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('a', !currentSegments['a']);
@@ -40,10 +40,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['b'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 28.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 18.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 40,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 20
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('b', !currentSegments['b']);
@@ -53,10 +53,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['c'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 38.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 50
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('c', !currentSegments['c']);
@@ -66,10 +66,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['d'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 28.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 38.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 40,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 50
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('d', !currentSegments['d']);
@@ -79,10 +79,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['e'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 58.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 10,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 80
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('e', !currentSegments['e']);
@@ -92,10 +92,10 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
             paint.color = currentSegments['f'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(
-                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 28.5,
-                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 58.2
+                    size.width / SEGMENTS_RELATIVE_DISPLAY_WIDTH * 40,
+                    size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 80
                 ),
-                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 6.8,
+                size.height / SEGMENTS_RELATIVE_DISPLAY_HEIGHT * 10,
                 paint,
                 onTapDown: (tapDetail) {
                   setSegmentState('f', !currentSegments['f']);
