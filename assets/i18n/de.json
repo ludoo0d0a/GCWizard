@@ -2857,12 +2857,12 @@
 
   "trifid_title" : "Trifid Chiffre",
   "trifid_description" : "Verschlüsselung basierend auf drei 3x3-Quadraten",
-  "trifid_example" : "HALLO → FNNAD",
+  "trifid_example" : "HALLO → BPBIO",
   "trifid_block_size" : "Blockgröße",
   "trifid_mode_az09" : "A-Z",
   "trifid_mode_za90" : "Z-A",
   "trifid_mode_custom" : "Eigenes Alphabet",
-  "trifid_usedgrid" : "Verwendete Matrix",
+  "trifid_usedgrid" : "Verwendete Quadrate",
   "trifid_error_alphabet" : "Benutzerdefiniertes Alphabet hat falsche Länge",
 
   "trithemius_title" : "Trithemius Chiffre",

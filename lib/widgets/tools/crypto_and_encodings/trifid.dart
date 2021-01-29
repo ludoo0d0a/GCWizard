@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gc_wizard/i18n/app_localizations.dart';
 import 'package:gc_wizard/logic/tools/crypto_and_encodings/trifid.dart';
 import 'package:gc_wizard/logic/tools/crypto_and_encodings/polybios.dart';
@@ -26,7 +27,7 @@ class TrifidState extends State<Trifid> {
 
   String _currentInput = '';
   String _currentAlphabet = '';
-  int _currentBlockSize = 0;
+  int _currentBlockSize = 4;
 
   PolybiosMode _currentTrifidMode = PolybiosMode.AZ09;
 
@@ -65,6 +66,7 @@ class TrifidState extends State<Trifid> {
         ),
         GCWTextField(
           controller: _inputController,
+          inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[A-Za-z]')),],
           onChanged: (text) {
             setState(() {
               _currentInput = text;
@@ -74,7 +76,7 @@ class TrifidState extends State<Trifid> {
         GCWIntegerSpinner(
           title: i18n(context, 'trifid_block_size'),
           value: _currentBlockSize,
-          min: 1,
+          min: 2,
           max: 7,
           onChanged: (value) {
             setState(() {
@@ -126,9 +128,9 @@ class TrifidState extends State<Trifid> {
 
     var _currentOutput = TrifidOutput('', '');
     if (_currentMode == GCWSwitchPosition.left) {
-      _currentOutput = TrifidChiffre(_currentInput.toUpperCase(), _currentBlockSize, mode: _currentTrifidMode, alphabet: _currentAlphabet.toUpperCase());
+      _currentOutput = encryptTrifid(_currentInput.toUpperCase(), _currentBlockSize, mode: _currentTrifidMode, alphabet: _currentAlphabet.toUpperCase());
     } else {
-      _currentOutput = TrifidChiffre(_currentInput, _currentBlockSize, mode: _currentTrifidMode, alphabet: _currentAlphabet.toUpperCase());
+      _currentOutput = decryptTrifid(_currentInput.toUpperCase(), _currentBlockSize, mode: _currentTrifidMode, alphabet: _currentAlphabet.toUpperCase());
     }
 
     if (_currentOutput.output.startsWith('trifid'))
