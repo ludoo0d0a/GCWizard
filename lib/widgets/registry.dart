@@ -176,6 +176,7 @@ import 'package:gc_wizard/widgets/tools/crypto_and_encodings/rsa/rsa_n_calculato
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/rsa/rsa_phi_calculator.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/skytale.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/solitaire.dart';
+import 'package:gc_wizard/widgets/tools/crypto_and_encodings/straddling_checkerboard.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/substitution.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/tap_code.dart';
 import 'package:gc_wizard/widgets/tools/crypto_and_encodings/tapir.dart';
@@ -781,6 +782,12 @@ class Registry {
         i18nPrefix: 'solitaire',
         category: ToolCategory.CRYPTOGRAPHY,
         searchStrings: 'solitaire solitaer carddeck cardgame joker kartenspiel kartendeck cryptonomicon pontifex bruceschneier stromchiffrierung streamcipher nealstephenson'
+      ),
+      GCWTool(
+        tool: StraddlingCheckerboard(),
+        i18nPrefix: 'straddlingcheckerboard',
+        category: ToolCategory.CRYPTOGRAPHY,
+        searchStrings: 'straddling checkerboard spreizung schachbrett gespreizt'
       ),
       GCWTool(
         tool: Substitution(),

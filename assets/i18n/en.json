@@ -2156,6 +2156,16 @@
   "spoonlanguage_description" : "Game Language, Secret Language",
   "spoonlanguage_example" : "Spoon → spolewoolewon",
 
+  "straddlingcheckerboard_title" : "Straddling Checkerboard",
+  "straddlingcheckerboard_description" : "Verschlüsselung basierend auf einem Quadrat mit zusätzlicher Transposition",
+  "straddlingcheckerboard_example" : "HELLO → FNNAD",
+  "straddlingcheckerboard_digitmode_escape" : "/",
+  "straddlingcheckerboard_digitmode_4x10" : "4x10",
+  "straddlingcheckerboard_hint_text" : "Text",
+  "straddlingcheckerboard_hint_key" : "Key: 10 Letters including 2 Spaces",
+  "straddlingcheckerboard_error_wrong_key" : "ERROR: Invalid key",
+  "straddlingcheckerboard_usedgrid" : "Used grid",
+
   "substitution_title" : "Replacements",
   "substitution_description" : "Replaces any character or group of character with another",
   "substitution_example" : "ABCBA with (A → a, B → 01) → a01C01a",

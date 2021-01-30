@@ -2156,6 +2156,16 @@
   "spoonlanguage_description" : "Spielsprache, Geheimsprache",
   "spoonlanguage_example" : "Löffel → lölewöffelewel",
 
+  "straddlingcheckerboard_title" : "Straddling Checkerboard",
+  "straddlingcheckerboard_description" : "Verschlüsselung basierend auf einem 3x10 Quadrat mit zusätzlicher Transposition",
+  "straddlingcheckerboard_example" : "HALLO → FNNAD",
+  "straddlingcheckerboard_hint_text" : "Text",
+  "straddlingcheckerboard_digitmode_escape" : "/",
+  "straddlingcheckerboard_digitmode_4x10" : "4x10",
+  "straddlingcheckerboard_hint_key" : "Schlüssel: 8 Buchstaben und 2 Leerzeichen",
+  "straddlingcheckerboard_error_wrong_key" : "FEHLER: Ungültiger Schlüssel",
+  "straddlingcheckerboard_usedgrid" : "Verwendete Matrix",
+
   "substitution_title" : "Ersetzen",
   "substitution_description" : "Ersetze Buchstaben und Buchstabengruppen mit beliebigen anderen",
   "substitution_example" : "ABCBA with (A → a, B → 01) → a01C01a",
