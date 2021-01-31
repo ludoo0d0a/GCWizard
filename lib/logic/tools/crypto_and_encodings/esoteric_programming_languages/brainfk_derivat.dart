@@ -8,10 +8,14 @@ class BrainfkDerivat {
   Map<String, String> substitutions;
 
   BrainfkDerivat({
-    pointerShiftLeftInstruction, pointerShiftRightInstruction,
-    decreaseValueInstruction, increaseValueInstruction,
-    startLoopInstruction, endLoopInstruction,
-    inputInstruction, outputInstruction
+    pointerShiftLeftInstruction,
+    pointerShiftRightInstruction,
+    decreaseValueInstruction,
+    increaseValueInstruction,
+    startLoopInstruction,
+    endLoopInstruction,
+    inputInstruction,
+    outputInstruction
   }) {
     substitutions = {
       pointerShiftLeftInstruction : '<',
