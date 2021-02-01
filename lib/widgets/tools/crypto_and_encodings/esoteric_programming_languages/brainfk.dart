@@ -248,7 +248,14 @@ class BrainfkState extends State<Brainfk> {
         if (_currentSubstitition == BrainfkTrivial.CUSTOM)
           return substitution(generateBrainfk(_currentText).split('').join(' '), {'<' : _currentInput_smaller, '>' : _currentInput_greater, '-' : _currentInput_minus, '+' : _currentInput_plus, '[' : _currentInput_open, ']' : _currentInput_close, ',' : _currentInput_komma, '.' : _currentInput_dot});
         else
-          return substitution(generateBrainfk(_currentText).split('').join(' '), brainfkTrivialSubstitutions[BRAINFK_TRIVIAL_LIST[_currentSubstitition]]);
+          switch (_currentSubstitition) {
+            case BrainfkTrivial.DETAILEDFUCK:
+            case BrainfkTrivial.OMAM:
+            case BrainfkTrivial.REVOLUTION9:
+            return substitution(generateBrainfk(_currentText).split('').join('\n'), brainfkTrivialSubstitutions[BRAINFK_TRIVIAL_LIST[_currentSubstitition]]);
+              break;
+            default: return substitution(generateBrainfk(_currentText).split('').join(' '), brainfkTrivialSubstitutions[BRAINFK_TRIVIAL_LIST[_currentSubstitition]]);
+          }
       }
 
     }
