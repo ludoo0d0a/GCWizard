@@ -345,6 +345,7 @@
   "brainfk_error_pointertoosmall" : "Zeiger zu klein",
   "brainfk_error_loopnotclosed" : "Schleife nicht geschlossen",
   "brainfk_error_loopnotopened" : "Schleife nicht geöffnet",
+  "brainfk_error_customundefined" : "Custom nicht definiert",
 
   "burrowswheeler_title" : "Burrows-Wheeler Transformation",
   "burrowswheeler_description" : "Grundlage für bzip-Komprimierung",

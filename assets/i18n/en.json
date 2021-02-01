@@ -310,6 +310,7 @@
   "brainfk_error_pointertoosmall" : "Pointer too small",
   "brainfk_error_loopnotclosed" : "Loop not closed",
   "brainfk_error_loopnotopened" : "Loop not opened",
+  "brainfk_error_customundefined" : "Custom not defined",
 
   "bifid_title" : "Bifid Cipher",
   "bifid_description" : "Cipher based on a square with an additional transposition",

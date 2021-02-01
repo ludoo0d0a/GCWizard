@@ -229,24 +229,33 @@ class BrainfkState extends State<Brainfk> {
 
   _calculateOutput() {
     if (_currentMode == GCWSwitchPosition.left) {
-      try {
         if (_currentOriginal == GCWSwitchPosition.left)
-          return widget.interpret == null ? interpretBrainfk(_currentText, input: _currentInput) : widget.interpret(_currentText, input: _currentInput);
+          try {
+            return widget.interpret == null ? interpretBrainfk(_currentText, input: _currentInput) : widget.interpret(_currentText, input: _currentInput);
+          } on FormatException catch(e) {
+            return printErrorMessage(context, e.message);
+          }
         else {
           if (_currentSubstitition == BrainfkTrivial.CUSTOM)
-            return interpretBrainfk(substitution(_currentText, {_currentInput_smaller : '<' , _currentInput_greater : '>', _currentInput_minus : '-', _currentInput_plus : '+', _currentInput_open : '[', _currentInput_close : ']', _currentInput_komma : ',', _currentInput_dot : '.'}), input: _currentInput);
+            try {
+              return interpretBrainfk(substitution(_currentText, {_currentInput_smaller : '<' , _currentInput_greater : '>', _currentInput_minus : '-', _currentInput_plus : '+', _currentInput_open : '[', _currentInput_close : ']', _currentInput_komma : ',', _currentInput_dot : '.'}), input: _currentInput);
+            } catch(e) {
+              return printErrorMessage(context, 'brainfk_error_customundefined');
+            }
           else
             return interpretBrainfk(substitution(_currentText, switchMapKeyValue(brainfkTrivialSubstitutions[BRAINFK_TRIVIAL_LIST[_currentSubstitition]])), input: _currentInput);
         }
-      } on FormatException catch(e) {
-        return printErrorMessage(context, e.message);
-      }
-    } else {
+    } else
+    {
       if (_currentOriginal == GCWSwitchPosition.left)
         return widget.generate == null ? generateBrainfk(_currentText) : widget.generate(_currentText);
       else {
         if (_currentSubstitition == BrainfkTrivial.CUSTOM)
-          return substitution(generateBrainfk(_currentText).split('').join(' '), {'<' : _currentInput_smaller, '>' : _currentInput_greater, '-' : _currentInput_minus, '+' : _currentInput_plus, '[' : _currentInput_open, ']' : _currentInput_close, ',' : _currentInput_komma, '.' : _currentInput_dot});
+          try {
+            return substitution(generateBrainfk(_currentText).split('').join(' '), {'<' : _currentInput_smaller, '>' : _currentInput_greater, '-' : _currentInput_minus, '+' : _currentInput_plus, '[' : _currentInput_open, ']' : _currentInput_close, ',' : _currentInput_komma, '.' : _currentInput_dot});
+          } catch(e) {
+            return printErrorMessage(context, 'brainfk_error_customundefined');
+          }
         else
           switch (_currentSubstitition) {
             case BrainfkTrivial.DETAILEDFUCK:
@@ -257,7 +266,6 @@ class BrainfkState extends State<Brainfk> {
             default: return substitution(generateBrainfk(_currentText).split('').join(' '), brainfkTrivialSubstitutions[BRAINFK_TRIVIAL_LIST[_currentSubstitition]]);
           }
       }
-
     }
   }
 }
