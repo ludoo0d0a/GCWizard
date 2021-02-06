@@ -34,67 +34,99 @@ enum NumeralWordsLanguage {DEU, DNK, ENG, ESP, FRA, ITA, KYR, NLD, NOR, POL, POR
 
 final Map<String, String> DEUWordToNum = { 'null' : '0', 'eins' : '1', 'zwei' : '2', 'drei' : '3', 'vier' : '4', 'fuenf' : '5', 'sechs' : '6', 'sieben' : '7', 'acht' : '8', 'neun' : '9',
   'zehn' : '10', 'elf' : '11', 'zwoelf' : '12', 'dreizehn' : '13', 'vierzehn' : '14','fuenfzehn' : '15', 'sechzehn' : '16', 'siebzehn' : '17', 'achtzehn' : '18', 'neunzehn' : '19',
-  'zwanzig' : '20','dreißig' : '30', 'vierzig' : '40', 'fuenfzig' : '50', 'sechzig' : '60', 'siebzig' : '70', 'achtzig' : '80', 'neunzig' : '90', 'hundert' : '100', 'tausend' : '1000'};
+  'zwanzig' : '20','dreißig' : '30', 'vierzig' : '40', 'fuenfzig' : '50', 'sechzig' : '60', 'siebzig' : '70', 'achtzig' : '80', 'neunzig' : '90', 'hundert' : '100', 'tausend' : '1000',
+  'grad' : 'grad', 'punkt' : 'punkt', 'nord' : 'nord', 'ost' : 'ost', 'west' : 'west', 'sued' : 'sued',
+};
 
 final Map<String, String> ENGWordToNum = {'zero' : '0', 'one' : '1', 'two' : '2', 'three' : '3', 'four' : '4', 'five' : '5', 'six' : '6', 'seven' : '7', 'eight' : '8', 'nine' : '9',
   'ten' : '10', 'eleven' : '11', 'twelve' : '12' , 'thirteen' : '13' , 'fourteen' : '14' , 'fifteen' : '15' , 'sixteen' : '16' , 'seventeen' : '17' , 'eighteen' : '18', 'nineteen' : '19',
-  'twenty' : '20', 'thirty' : '30', 'fourty' : '40', 'fifty' : '50', 'sixty' : '60', 'seventy' : '70', 'eighty' : '80', 'ninety' : '90', 'hundred' : '100', 'thousand' : '1000' };
+  'twenty' : '20', 'thirty' : '30', 'fourty' : '40', 'fifty' : '50', 'sixty' : '60', 'seventy' : '70', 'eighty' : '80', 'ninety' : '90', 'hundred' : '100', 'thousand' : '1000',
+  'degree' : 'grad', 'point' : 'punkt', 'north' : 'nord', 'east' : 'ost', 'west' : 'west', 'south' : 'sued'
+};
 
 final Map<String, String> DNKWordToNum = {'nul' : '0', 'en' : '1', 'to' : '2', 'tre' : '3', 'fire' : '4', 'fem' : '5', 'seks' : '6', 'syve' : '7', 'otte' : '8', 'ni' : '9',
   'ti' : '10', 'elleve' : '11', 'tolv' : '12', 'tretten' : '13', 'fjorten' : '14', 'femten' : '15', 'seksten' : '16', 'sytten' : '17', 'atten' : '18', 'nitten' : '19',
-  'tyve' : '20', 'tredive' : '30', 'fyrre' : '40', 'halvtreds' : '50', 'tres' : '60', 'halvfjerds' : '70', 'firs' : '80', 'halvfems' : '90', 'hundrede' : '100', 'tusind' : '1000' };
+  'tyve' : '20', 'tredive' : '30', 'fyrre' : '40', 'halvtreds' : '50', 'tres' : '60', 'halvfjerds' : '70', 'firs' : '80', 'halvfems' : '90', 'hundrede' : '100', 'tusind' : '1000',
+  'grad' : 'grad', 'punkt' : 'punkt', 'nord' : 'nord', 'øst' : 'ost', 'vest' : 'west', 'syd' : 'sued'
+};
 
 final Map<String, String> NLDWordToNum = { 'nul' : '0', 'een' : '1', 'zwee' : '2', 'trie' : '3', 'vier' : '4', 'vijf' : '5', 'zes' : '6', 'zeven' : '7', 'acht' : '8', 'negen' : '9',
   'tien' : '10', 'elf': '11', 'twaalf' : '12', 'dertien' : '13', 'veerteen' : '14','vijfteen' : '15', 'zestien' : '16', 'zeventien' : '17', 'achttien' : '18', 'negentien' : '19',
-  'twintig' : '20','dertig' : '30', 'veertig' : '40', 'vijftig' : '50', 'testig' : '60', 'zeventig' : '70', 'tachtig' : '80', 'negentig' : '90', 'honderd' : '100', 'duizend' : '1000'};
+  'twintig' : '20','dertig' : '30', 'veertig' : '40', 'vijftig' : '50', 'testig' : '60', 'zeventig' : '70', 'tachtig' : '80', 'negentig' : '90', 'honderd' : '100', 'duizend' : '1000',
+  'graad' : 'grad', 'punt' : 'punkt', 'noord' : 'nord', 'oost' : 'ost', 'west' : 'west', 'zuid' : 'sued'
+};
 
 final Map<String, String> SWEWordToNum = {'noll' : '0', 'en' : '1', 'ett' : '1', 'två' : '2', 'tre' : '3', 'fyra' : '4', 'fem' : '5', 'sex' : '6', 'sju' : '7', 'åtta' : '8', 'nio' : '9',
   'tio' : '10', 'elva' : '11', 'tolv' : '12', 'tretton' : '13', 'fjorton' : '14', 'femton' : '15', 'sexton' : '16', 'sjutton' : '17', 'arton' : '18', 'nitton' : '19',
-  'tjugo' : '20', 'trettio' : '30', 'fyrtio' : '40', 'femtio' : '50', 'sextio' : '60', 'sjuttio' : '70', 'åttio' : '80', 'nittio' : '90', 'hundra' : '100', 'tusen' : '1000' };
+  'tjugo' : '20', 'trettio' : '30', 'fyrtio' : '40', 'femtio' : '50', 'sextio' : '60', 'sjuttio' : '70', 'åttio' : '80', 'nittio' : '90', 'hundra' : '100', 'tusen' : '1000',
+  'grad' : 'grad', 'punkt' : 'punkt', 'norr' : 'nord', 'ost' : 'ost', 'väst' : 'west', 'syd' : 'sued'
+};
 
 final Map<String, String> NORWordToNum = {'nul' : '0', 'en' : '1', 'ett' : '1', 'to' : '2', 'tre' : '3', 'fire' : '4', 'fem' : '5', 'seks' : '6', 'sju' : '7','syv' : '7', 'åtte' : '8', 'ni' : '9',
   'ti' : '10', 'elleve' : '11', 'tolv' : '12', 'tretten' : '13', 'fjorten' : '14', 'femten' : '15', 'seksten' : '16', 'sytten' : '17', 'atten' : '18', 'nitten' : '19',
-  'tjue' : '20', 'tretti' : '30', 'førti' : '40', 'femti' : '50', 'seksti' : '60', 'sytti' : '70', 'åtti' : '80', 'nitti' : '90', 'hundre' : '100', 'tusen' : '1000'};
+  'tjue' : '20', 'tretti' : '30', 'førti' : '40', 'femti' : '50', 'seksti' : '60', 'sytti' : '70', 'åtti' : '80', 'nitti' : '90', 'hundre' : '100', 'tusen' : '1000',
+  'grad' : 'grad', 'punkt' : 'punkt', 'nord' : 'nord', 'øst' : 'ost', 'vest' : 'west', 'sør' : 'sued'
+};
 
 final Map<String, String> ITAWordToNum = {'zero' : '0', 'uno' : '1', 'due' : '2', 'tre' : '3', 'quattro' : '4', 'cinque' : '5', 'sei' : '6', 'sette' : '7', 'otto' : '8', 'nove' : '9',
   'dieci' : '10', 'undici' : '11', 'dodici' : '12', 'tredici' : '13', 'quattordici' : '14', 'quindici' : '15', 'sedici' : '16', 'diciasette' : '17', 'diciotto' : '18', 'diciannove' : '19',
-  'venti' : '20', 'trenta' : '30', 'quaranta' : '40', 'cinquanta' : '50', 'sessanta' : '60', 'settanta' : '70', 'ottanta' : '80', 'novanta' : '90', 'cento' : '100', 'mille' : '1000' };
+  'venti' : '20', 'trenta' : '30', 'quaranta' : '40', 'cinquanta' : '50', 'sessanta' : '60', 'settanta' : '70', 'ottanta' : '80', 'novanta' : '90', 'cento' : '100', 'mille' : '1000',
+  'grado' : 'grad', 'punto' : 'punkt', 'nord' : 'nord', 'est' : 'ovest', 'west' : 'west', 'sud' : 'sued'
+};
 
 final Map<String, String> FRAWordToNum = {'zéro' : '0', 'un' : '1', 'une': '1', 'deux' : '2', 'trois' : '3', 'quatre' : '4', 'cinq' : '5', 'sis' : '6', 'sept' : '7', 'huit' : '8', 'neuf' : '9',
   'dix' : '10', 'onze' : '11', 'douze' : '12', 'treize' : '13', 'quatorze' : '14', 'quinze' : '15', 'seize' : '16', 'dix-sept' : '17', 'dix-huit' : '18', 'dix-neuf' : '19',
-  'vingt' : '20', 'trente' : '30', 'quarante' : '40', 'cinqante' : '50', 'soixante' : '60', 'soixante-dix' : '70', 'quatre-vingt' : '80', 'quatre-vingt-dix' : '90', 'cent' : '100', 'mille' : '1000' };
+  'vingt' : '20', 'trente' : '30', 'quarante' : '40', 'cinqante' : '50', 'soixante' : '60', 'soixante-dix' : '70', 'quatre-vingt' : '80', 'quatre-vingt-dix' : '90', 'cent' : '100', 'mille' : '1000',
+  'degré' : 'grad', 'point' : 'punkt', 'nord' : 'nord', 'est' : 'ost', 'oest' : 'west', 'sud' : 'sued'
+};
 
 final Map<String, String> ESPWordToNum = {'cero' : '0', 'uno' : '1', 'una': '1', 'dos' : '2', 'tres' : '3', 'cuatro' : '4', 'cinco' : '5', 'seis' : '6', 'siete' : '7', 'ocho' : '8', 'nueve' : '9',
   'diez' : '10', 'once' : '11', 'doce' : '12', 'trece' : '13', 'catorce' : '14', 'quince' : '15', 'dieciséis' : '16', 'diecisiete' : '17', 'dieciocho' : '18', 'diecinueve' : '19',
-  'viente' : '20', 'treinta' : '30', 'cuaranta' : '40', 'cincuenta' : '50', 'sesenta' : '60', 'setenta' : '70', 'ochenta' : '80', 'noventa' : '90', 'cien' : '100', 'mil' : '1000' };
+  'viente' : '20', 'treinta' : '30', 'cuaranta' : '40', 'cincuenta' : '50', 'sesenta' : '60', 'setenta' : '70', 'ochenta' : '80', 'noventa' : '90', 'cien' : '100', 'mil' : '1000',
+  'grado' : 'grad', 'punto' : 'punkt', 'norte' : 'nord', 'este' : 'ost', 'oeste' : 'west', 'sur' : 'sued'
+};
 
 final Map<String, String> PORWordToNum = {'zero' : '0', 'um' : '1', 'dois' : '2', 'duas' : '2', 'tres' : '3', 'quatro' : '4', 'cinco' : '5', 'seis' : '6', 'sete' : '7', 'oito' : '8', 'nove' : '9',
   'dez' : '10', 'onze' : '11', 'doze' : '12', 'treze' : '13', 'catorze' : '14', 'quinze' : '15', 'dezasseis' : '16', 'dezassete' : '17', 'dezoito' : '18', 'dezanove' : '19',
-  'vinte' : '20', 'trinta' : '30', 'quaranta' : '40', 'cinquenta' : '50', 'sessenta' : '60', 'setenta' : '70', 'oitenta' : '80', 'noventa' : '90', 'cem' : '100', 'cento' : '100', 'mil' : '1000' };
+  'vinte' : '20', 'trinta' : '30', 'quaranta' : '40', 'cinquenta' : '50', 'sessenta' : '60', 'setenta' : '70', 'oitenta' : '80', 'noventa' : '90', 'cem' : '100', 'cento' : '100', 'mil' : '1000',
+  'grau' : 'grad', 'ponto' : 'punkt', 'norte' : 'nord', 'leste' : 'ost', 'oeste' : 'west', 'sul' : 'sued'
+};
 
 final Map<String, String> POLWordToNum = {'zero' : '0', 'jeden' : '1', 'jedna' : '1', 'jedno' : '1', 'dwa' : '2', 'dwie' : '2', 'trzy' : '3', 'cztery' : '4', 'pięć' : '5', 'sześć' : '6', 'siedem' : '7', 'osiem' : '8', 'dziewięć' : '9',
   'dziesięć' : '10', 'jedenaście' : '11', 'dwanaście' : '12', 'trzynaście' : '13', 'czternaście' : '14', 'piętnaście' : '15', 'szesnaście' : '16', 'siedemnaście' : '17', 'osiemnaście' : '18', 'dziewiętnaście' : '19',
-  'dwadzieścia' : '20', 'trzydzieści' : '30', 'czterdzieści' : '40', 'pięćdziesiąt' : '50', 'sześćdziesiąt' : '60', 'siedemdziesiąt' : '70', 'osiemdziesiąt' : '80', 'dziewięćdziesiąt' : '90', 'sto' : '100', 'tysiąc' : '1000'};
+  'dwadzieścia' : '20', 'trzydzieści' : '30', 'czterdzieści' : '40', 'pięćdziesiąt' : '50', 'sześćdziesiąt' : '60', 'siedemdziesiąt' : '70', 'osiemdziesiąt' : '80', 'dziewięćdziesiąt' : '90', 'sto' : '100', 'tysiąc' : '1000',
+  'stopień' : 'grad', 'kropka' : 'punkt', 'północ' : 'nord', 'wschód' : 'ost', 'zachód' : 'west', 'południe' : 'sued'
+};
 
 final Map<String, String> RUSWordToNum = {'nol’' : '0', 'nul’' : '0', 'adna' : '1', 'adno' : '1', 'adin' : '1', 'dwa' : '2', 'dwje' : '2', 'tri' : '3', 'četýrje' : '4', 'pjat' : '5', 'šest' : '6', 'sem' : '7', 'vosem' : '8', 'djèvjat' : '9',
   'djèsjat' : '10', 'odinnàẓat' : '11', 'dvjennàẓat' : '12', 'trinnàẓat' : '13', 'četyrnàẓat' : '14', 'pjatnnàẓat' : '15', 'šestnàẓat' : '16', 'semnàẓat' : '17', 'vosemnàẓat	' : '18', 'djvjatnàẓat' : '19',
-  'dvàẓat' : '20', 'trizat' : '30', 'sòrak' : '40', 'pjatdesjat' : '50', 'šestdesjat' : '60', 'semdesjat' : '70', 'vosemdesjat' : '80', 'devianosto' : '90', 'sto' : '100', 'týsjača' : '1000'};
+  'dvàẓat' : '20', 'trizat' : '30', 'sòrak' : '40', 'pjatdesjat' : '50', 'šestdesjat' : '60', 'semdesjat' : '70', 'vosemdesjat' : '80', 'devianosto' : '90', 'sto' : '100', 'týsjača' : '1000',
+  'grad' : 'grad', 'tochki' : 'punkt', 'sever' : 'nord', 'vostok' : 'ost', 'zapad' : 'west', 'sued' : 'yug'
+};
 
 final Map<String, String> KYRWordToNum = {'ноль' : '0', 'нуль' : '0', 'один' : '1', 'одна' : '1', 'одно' : '1', 'два' : '2', 'две' : '2', 'три' : '3', 'четыре' : '4', 'пять' : '5', 'шесть' : '6', 'семь' : '7', 'восемь' : '8', 'девять' : '9',
   'десять' : '10', 'одиннадцать' : '11', 'двенадцать' : '12', 'тринадцать' : '13', 'четырнадцать' : '14', 'пятнадцать' : '15', 'шестнадцать' : '16', 'семнадцать' : '17', 'восемнадцать' : '18', 'девятнадцать' : '19',
-  'двадцать' : '20', 'тридцать' : '30', 'сорок' : '40', 'пятьдесят' : '50', 'шестьдесят' : '60', 'семьдесят' : '70', 'восемьдесят' : '80', 'девяносто' : '90', 'сто' : '100', 'тысяча' : '1000'};
+  'двадцать' : '20', 'тридцать' : '30', 'сорок' : '40', 'пятьдесят' : '50', 'шестьдесят' : '60', 'семьдесят' : '70', 'восемьдесят' : '80', 'девяносто' : '90', 'сто' : '100', 'тысяча' : '1000',
+  'градус' : 'grad', 'точка' : 'punkt', 'север' : 'восточ', 'Восток' : 'ost', 'Запад' : 'west', 'юг' : 'sued'
+};
 
 final Map<String, String> VOLWordToNum = {'ser' : '0', 'bal' : '1', 'tel' : '2', 'kil' : '3', 'fol' : '4', 'lul' : '5', 'mael' : '6', 'vel' : '7', 'joel' : '8', 'zuel' : '9',
   'deg' : '10', 'degbal' : '11', 'degtel' : '12', 'degtil' : '13', 'degfol' : '14', 'deglul' : '15', 'degmael' : '16', 'degvel' : '17', 'degjoel' : '18', 'degzuel' : '19',
-  'teldeg' : '20', 'tildeg' : '30', 'foldeg' : '40', 'luldeg' : '50', 'maeldeg' : '60', 'veldeg' : '70', 'joeldeg' : '80', 'zueldeg' : '90', 'tum' : '100', 'mil' : '1000' };
+  'teldeg' : '20', 'tildeg' : '30', 'foldeg' : '40', 'luldeg' : '50', 'maeldeg' : '60', 'veldeg' : '70', 'joeldeg' : '80', 'zueldeg' : '90', 'tum' : '100', 'mil' : '1000',
+  'nolued' : 'norden', 'sulued' : 'sueden', 'lofued' : 'osten', 'vesued' : 'westen', 'grad' : 'grad', 'puen' : 'punkt',
+};
 
 final Map<String, String> EPOWordToNum = {'nulo' : '0', 'unu' : '1', 'du' : '2', 'tri' : '3', 'kvar' : '4', 'kvin' : '5', 'ses' : '6', 'sep' : '7', 'ok' : '8', 'naŭ' : '9',
   'dek' : '10', 'dek unu' : '11', 'dek du' : '12', 'dek tri' : '13', 'dek kvar' : '14', 'dek kvin' : '15', 'dek ses' : '16', 'dek sep' : '17', 'dek ok' : '18', 'dek naŭ' : '19',
-  'dudek' : '20', 'tridek' : '30', 'kvardek' : '40', 'kvindek' : '50', 'sesdek' : '60', 'sepdek' : '70', 'okdek' : '80', 'naŭdek' : '90', 'cent' : '100', 'mil' : '1000'};
+  'dudek' : '20', 'tridek' : '30', 'kvardek' : '40', 'kvindek' : '50', 'sesdek' : '60', 'sepdek' : '70', 'okdek' : '80', 'naŭdek' : '90', 'cent' : '100', 'mil' : '1000',
+  'nordo' : 'norden', 'sudo' : 'sueden', 'oriento' : 'osten', 'okcidento' : 'westen', 'grado' : 'grad', 'punkto' : 'punkt',
+};
 
 final Map<String, String> SOLWordToNum = {'soldo' : '0', 'redodo' : '1', 'remimi' : '2', 'refafa' : '3', 'resolsol' : '4', 'relala' : '5', 'resisi' : '6', 'mimido' : '7', 'mimire' : '8', 'mimifa' : '9',
   'mimisol' : '10', 'mimila' : '11', 'mimisi' : '12', 'midodo' : '13', 'mirere' : '14', 'mifafa' : '15', 'misolsol' : '16', 'milala' : '17', 'misisi' : '18', 'fafado' : '19',
-  'fafare' : '20', 'fafami' : '30', 'fafasol' : '40', 'fafala' : '50', 'fafasi' : '60', 'fafasi mimisol' : '70', 'fadodo' : '80', 'fadodo mimisol' : '90', 'farere' : '100', 'famimi' : '1000'};
+  'fafare' : '20', 'fafami' : '30', 'fafasol' : '40', 'fafala' : '50', 'fafasi' : '60', 'fafasi mimisol' : '70', 'fadodo' : '80', 'fadodo mimisol' : '90', 'farere' : '100', 'famimi' : '1000',
+  'dolasifa' : 'norden', 'fasilado' : 'sueden', 'fasilare' : 'osten', 'relasifa' : 'westen', 'famidosi' : 'grad', 'relaresol' : 'punkt',
+};
 
 Map<NumeralWordsLanguage, String> NUMERALWORDS_LANGUAGES = {
   NumeralWordsLanguage.DEU : 'common_language_german',

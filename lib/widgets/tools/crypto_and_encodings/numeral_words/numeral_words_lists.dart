@@ -59,7 +59,10 @@ class NumeralWordsListsState extends State<NumeralWordsLists> {
       child: Column(
         children: columnedMultiLineOutput(
           context,
-          numeralWordsOverview.entries.map((entry) {return [entry.value, entry.key];}).toList(),
+          numeralWordsOverview.entries.map((entry) {
+            if (int.tryParse(entry.value) != null)
+              return [entry.value, entry.key];
+          }).toList(),
           flexValues: [1, 3]
         ),
       )
