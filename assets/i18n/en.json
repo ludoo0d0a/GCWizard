@@ -1578,6 +1578,8 @@
   "mayanumbers_description" : "Vigesimal System (Numeral Base 20) of the Mayas",
   "mayanumbers_single_numbers" : "Separate Numbers",
   "mayanumbers_vigesimal" : "Number in Vigesimal System (Numeral Base 20)",
+  "mayanumbers_mode_calendar" : "Calendar Calculations",
+  "mayanumbers_mode_calculate" : "Other Calculations",
 
   "mexicanarmycipherwheel_title": "Mexican Army Cipher Disk",
   "mexicanarmycipherwheel_description": "Used by the Mexican Army in a war with the USA before World War I.",

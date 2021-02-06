@@ -24,17 +24,22 @@ final Map<int, List<String>> _numbersToSegments = {
   19 : ['a', 'b','c', 'd', 'e', 'f', 'g'],
 };
 
-List<List<String>> encodeMayaNumbers(int input) {
+
+List<List<String>> encodeMayaNumbers(int input, bool calcModus) {
   if (input == null)
     return [];
 
-  var vigesimal = convertBase(input.toString(), 10, 20);
+  String vigesimal = '';
+  if (calcModus)
+    vigesimal = convertBase(input.toString(), 10, 20);
+  else
+    vigesimal = convertDecToMayaCalendar(input.toString());
   return vigesimal.split('').map((digit) {
     return _numbersToSegments[int.tryParse(convertBase(digit, 20, 10))];
   }).toList();
 }
 
-Map<String, dynamic> decodeMayaNumbers(List<String> inputs) {
+Map<String, dynamic> decodeMayaNumbers(List<String> inputs, bool calcModus) {
   if (inputs == null || inputs.length == 0)
     return {'displays': [[]], 'numbers': [0], 'vigesimal' : BigInt.zero};
 
@@ -67,9 +72,16 @@ Map<String, dynamic> decodeMayaNumbers(List<String> inputs) {
       return number;
     }).toList();
 
-  var total = convertBase(
-    numbers.map((number) => convertBase(number.toString(), 10, 20)).join(),
-    20, 10);
+  String total;
+  print(numbers.toString());
+  if (calcModus) {
+    total = convertBase(numbers.map((number) => convertBase(number.toString(), 10, 20)).join(),
+                        20, 10);
+  } else {
+    total = '0';
+    for (int i = 0; i < numbers.length; i++)
+      total = (int.parse(total) + numbers[i] * mayaSystem[numbers.length - i - 1]).toString();
+  }
 
   return {'displays': displays, 'numbers': numbers, 'vigesimal' : BigInt.tryParse(total)};
 }
