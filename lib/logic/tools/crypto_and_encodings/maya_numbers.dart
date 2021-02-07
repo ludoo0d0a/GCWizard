@@ -73,14 +73,21 @@ Map<String, dynamic> decodeMayaNumbers(List<String> inputs, bool calcModus) {
     }).toList();
 
   String total;
-  print(numbers.toString());
   if (calcModus) {
     total = convertBase(numbers.map((number) => convertBase(number.toString(), 10, 20)).join(),
                         20, 10);
   } else {
     total = '0';
-    for (int i = 0; i < numbers.length; i++)
-      total = (int.parse(total) + numbers[i] * mayaSystem[numbers.length - i - 1]).toString();
+    bool invalid = false;
+    for (int i = 0; i < numbers.length; i++) {
+      if ((i == numbers.length - 2) && (mayaSystem[numbers.length - i - 1] == 20) && (numbers[i] > 17))
+        invalid = true;
+      else
+        total = (int.parse(total) + numbers[i] * mayaSystem[numbers.length - i - 1])
+            .toString();
+    }
+    if (invalid)
+      total = "-1";
   }
 
   return {'displays': displays, 'numbers': numbers, 'vigesimal' : BigInt.tryParse(total)};
