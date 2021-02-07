@@ -4,7 +4,9 @@ import 'package:gc_wizard/widgets/tools/science_and_technology/segment_display/b
 import 'package:gc_wizard/widgets/tools/science_and_technology/segment_display/base/painter.dart';
 
 const _INITIAL_SEGMENTS = <String, bool>{
-  'a': false, 'b': false, 'c': false, 'd': false, 'e': false, 'f': false
+  'a': false, 'b': false,
+  'c': false, 'd': false,
+  'e': false, 'f': false
 };
 
 class BrailleSegmentDisplay extends NSegmentDisplay {
@@ -23,7 +25,6 @@ class BrailleSegmentDisplay extends NSegmentDisplay {
           type: SegmentDisplayType.CUSTOM,
           customPaint: (canvas, size, currentSegments, setSegmentState) {
             var paint = defaultSegmentPaint();
-
             paint.color = currentSegments['a'] ? SEGMENTS_COLOR_ON : SEGMENTS_COLOR_OFF;
             canvas.drawCircle(
                 Offset(

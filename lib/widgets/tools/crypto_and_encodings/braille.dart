@@ -142,7 +142,7 @@ class BrailleState extends State<Braille> {
       children: <Widget>[
         Container(
           width: 180,
-          height: 180,
+          height: 200,
           padding: EdgeInsets.only(
               top: DEFAULT_MARGIN * 2,
               bottom: DEFAULT_MARGIN * 4

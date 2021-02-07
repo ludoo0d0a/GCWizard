@@ -277,7 +277,7 @@ Map<String, dynamic> decodeBraille(List<String> inputs, BrailleLanguage language
   switch (language) {
     case BrailleLanguage.DEU:
       _segmentsToChars = _segmentsToCharsDEU;
-      _segmentsToChars[['d','e', 'f']] = '"';
+      _segmentsToChars[['d', 'e', 'f']] = '"';
       break;
     case BrailleLanguage.ENG: _segmentsToChars = _segmentsToCharsENG; break;
   }
@@ -287,36 +287,38 @@ Map<String, dynamic> decodeBraille(List<String> inputs, BrailleLanguage language
   List<String> text = inputs
       .where((input) => input != null)
       .map((input) {
-    var char = '';
-    var charH = '';
-    var display = <String>[];
-    display.add(input);
-    if (_segmentsToChars.map((key, value) => MapEntry(key.join(), value.toString()))[input.split('').join()] == null)
-      char = char + UNKNOWN_ELEMENT;
-    else {
-      charH = _segmentsToChars.map((key, value) => MapEntry(key.join(), value.toString()))[input.split('').join()];
-      if (charH == '#')
-        numberFollows = !numberFollows;
-      else {
-        if (numberFollows && charH == 'A') charH = '1';
-        else if (numberFollows && charH == 'B') charH = '2';
-        else if (numberFollows && charH == 'C') charH = '3';
-        else if (numberFollows && charH == 'D') charH = '4';
-        else if (numberFollows && charH == 'E') charH = '5';
-        else if (numberFollows && charH == 'F') charH = '6';
-        else if (numberFollows && charH == 'G') charH = '7';
-        else if (numberFollows && charH == 'H') charH = '8';
-        else if (numberFollows && charH == 'I') charH = '9';
-        else if (numberFollows && charH == 'J') charH = '0';
-        char = char + charH;
-        numberFollows = false;
-      }
-    }
+        var char = '';
+        var charH = '';
+        var display = <String>[];
+        input.split('').forEach((element) {
+          display.add(element);
+        });
+        if (_segmentsToChars.map((key, value) => MapEntry(key.join(), value.toString()))[input.split('').join()] == null)
+          char = char + UNKNOWN_ELEMENT;
+        else {
+          charH = _segmentsToChars.map((key, value) => MapEntry(key.join(), value.toString()))[input.split('').join()];
+          if (charH == '#')
+            numberFollows = !numberFollows;
+          else {
+            if (numberFollows && charH == 'A') charH = '1';
+            else if (numberFollows && charH == 'B') charH = '2';
+            else if (numberFollows && charH == 'C') charH = '3';
+            else if (numberFollows && charH == 'D') charH = '4';
+            else if (numberFollows && charH == 'E') charH = '5';
+            else if (numberFollows && charH == 'F') charH = '6';
+            else if (numberFollows && charH == 'G') charH = '7';
+            else if (numberFollows && charH == 'H') charH = '8';
+            else if (numberFollows && charH == 'I') charH = '9';
+            else if (numberFollows && charH == 'J') charH = '0';
+            char = char + charH;
+            numberFollows = false;
+          }
+        }
 
-    displays.add(display);
+        displays.add(display);
 
-    return char;
-  }).toList();
+        return char;
+      }).toList();
 
 
   return {'displays': displays, 'chars': text};
