@@ -2,6 +2,18 @@
 
 ## How to contribute a new function?
 
+to fix location in macos:
+
+``` 
+wget https://raw.githubusercontent.com/Lyokone/flutterlocation/master/packages/location/darwin/Classes/LocationPlugin.m -o ~/.pub-cache/hosted/pub.dartlang.org/location-4.1.1/darwin/Classes/LocationPlugin.m
+
+wget https://raw.githubusercontent.com/Lyokone/flutterlocation/e00259f2948966ec7b3093856edd26076a309258/packages/location/macos/Classes/LocationPlugin.m -O 
+
+```
+else disable location import in
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+
 ### Create your development environment (Android)
 
 [And iOS setup is missing at the moment]

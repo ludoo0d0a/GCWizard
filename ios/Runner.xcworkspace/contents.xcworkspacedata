@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/sman/development/GCWizard/ios/Runner.xcodeproj">
+      location = "group:/Users/sman/development/gcwizard/ios/Runner.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Runner.xcodeproj">
